@@ -10,7 +10,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Human : NSObject {
-    @private
     int m_nHeight;
     int m_nWeight;
 }

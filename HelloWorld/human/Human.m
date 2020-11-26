@@ -13,11 +13,11 @@
     return [self initWithArgs:0 nWeight:0];
 }
 
--(id) initWithArgs: (int) h nWeight:(int) w {
+-(id) initWithArgs: (int) nHeight nWeight:(int) nWeight {
     self = [super init];
     if (self) {
-        m_nHeight = h;
-        m_nWeight = w;
+        m_nHeight = nHeight;
+        m_nWeight = nWeight;
     }
     
     return self;
