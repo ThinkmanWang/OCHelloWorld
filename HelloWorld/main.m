@@ -44,9 +44,11 @@ void list_test() {
 }
 
 int main(int argc, const char * argv[]) {
-    func1();
-    func2(@"Hello World");
-    list_test();
+    @autoreleasepool {
+        func1();
+        func2(@"Hello World");
+        list_test();
+    }
 //    @autoreleasepool {
 //        // insert code here...
 //        NSString* anotherString = [NSString stringWithFormat:@"%d %s", 1, "String"];
