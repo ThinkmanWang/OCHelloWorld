@@ -12,6 +12,8 @@
 #include "thinkutils/data_type/ThinkList.h"
 #include "thinkutils/log/log.h"
 
+#import "human/Human.h"
+
 void func1() {
     int* pA = malloc(sizeof(int));
     *pA = 123;
@@ -36,7 +38,7 @@ void list_test() {
     
     for (int i = 0; i < think_list_length(pList); ++i) {
         int* pItem = think_list_get(pList, i);
-        NSLog(@"%d", *pItem);
+//        NSLog(@"%d", *pItem);
         log_info("%d", *pItem);
     }
     
@@ -48,6 +50,9 @@ int main(int argc, const char * argv[]) {
         func1();
         func2(@"Hello World");
         list_test();
+        
+        Human* pHuman = [[Human alloc] initWithArgs:172 nWeight:65];
+        NSLog([pHuman toString]);
     }
 //    @autoreleasepool {
 //        // insert code here...
