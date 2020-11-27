@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 -(id) init ;
 -(id) initWithArgs: (int) h nWeight:(int) w;
 -(NSString*) toString;
+-(NSString*) help;
++(void) classMethod;
 @end
 
 NS_ASSUME_NONNULL_END

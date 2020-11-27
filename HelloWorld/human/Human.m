@@ -6,6 +6,8 @@
 //
 
 #import "Human.h"
+#import <Foundation/Foundation.h>
+
 
 @implementation Human
 
@@ -26,6 +28,14 @@
 -(NSString*) toString {
     NSString* pTxt = [NSString stringWithFormat:@"Height: %d Weight: %d", m_nHeight, m_nWeight];
     return pTxt;
+}
+
+-(NSString*) help {
+    return @"@#$%^&*()";
+}
+
++(void) classMethod {
+    NSLog(@"a class method");
 }
 
 @end

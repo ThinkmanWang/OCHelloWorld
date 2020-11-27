@@ -13,6 +13,7 @@
 #include "thinkutils/log/log.h"
 
 #import "human/Human.h"
+#import "human/Hominids.h"
 
 void func1() {
     int* pA = malloc(sizeof(int));
@@ -45,14 +46,28 @@ void list_test() {
     think_list_free(&pList, free);
 }
 
+void human_test() {
+    @autoreleasepool {
+        [Human classMethod];
+        
+        Human* pHuman = [[Human alloc] initWithArgs:150 nWeight:40];
+        NSLog([pHuman toString]);
+        NSLog([pHuman help]);
+        
+        Human* pHuman1 = [[Hominids alloc] initWithArgs:172 nWeight:65];
+        NSLog([pHuman1 toString]);
+        NSLog([pHuman1 help]);
+
+    }
+}
+
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         func1();
         func2(@"Hello World");
         list_test();
         
-        Human* pHuman = [[Human alloc] initWithArgs:172 nWeight:65];
-        NSLog([pHuman toString]);
+        human_test();
     }
 //    @autoreleasepool {
 //        // insert code here...
